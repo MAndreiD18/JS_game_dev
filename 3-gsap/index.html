@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP Animation</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+        src="https://unpkg.com/gsap@3/dist/SplitText.min.js"
+    </script>
+  </head>
+  <body>
+    <script>
+        gsap.registerPlugin(SplitText);
+
+gsap.set("h1", { opacity: 1 });
+
+let split = SplitText.create("#heading", { type: "chars" });
+//now animate each character into place from 20px below, fading in:
+gsap.from(split.chars, {
+  y: 20,
+  autoAlpha: 0,
+  stagger: 0.05
+});
+    </script>
+    <h1 id="heading">GSAP Startetr Template</h1>
+    <p>
+      This pen loads all the GSAP files <br />
+      Fork and ejoy!
+    </p>
+  </body>
+</html>

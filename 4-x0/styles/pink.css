@@ -1,0 +1,25 @@
+#game {
+    background-color: pink;
+    border: 2px dotted rgb(0, 0, 200);
+    width: 300px;
+    height: 300px;
+}
+
+#game td  {
+    border: 1px solid #0000ac;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#game td:hover {
+    background-color: #f0f0f0;
+}
+
+#game.over td:hover {
+    background-color: initial;
+}
+
