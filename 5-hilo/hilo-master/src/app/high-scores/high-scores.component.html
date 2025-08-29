@@ -1,0 +1,19 @@
+<div id="high">
+  <h1>High Scores ({{ winners.length }})</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (winner of winners; track winner.name) {
+      <tr>
+        <td>{{ winner.name }}</td>
+        <td>{{ winner.score }}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>

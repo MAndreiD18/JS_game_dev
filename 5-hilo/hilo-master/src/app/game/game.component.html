@@ -1,0 +1,52 @@
+<div id="screen">
+  <main id="game">
+    <div class="menu">
+      <button
+        (click)="confirmNewGame('Are you sure you want to start a mew game?')"
+      >
+        New Game
+      </button>
+    </div>
+
+    <h1 class="animate__animated animate__bounce">{{ gameTitle }}</h1>
+    <!-- Add no. straks -->
+    <div id="stats">
+      <div id="score">
+        Score: <span class="{{ animationScore }}">{{ score }}</span>
+      </div>
+      <div id="time">
+        Left: <span class="{{ scoreClass }}">{{ humanTimeLeft }}</span>
+      </div>
+    </div>
+
+    <section id="controls">
+      <div>
+        <button
+          (click)="guessHi()"
+          title="Guess Higher or Equal"
+          [disabled]="isGameOver"
+        >
+          Hi
+        </button>
+      </div>
+      <div>
+        <button
+          (click)="guessLo()"
+          title="Guess Lower or Equal"
+          [disabled]="isGameOver"
+        >
+          Lo
+        </button>
+      </div>
+    </section>
+
+    <!-- carte -->
+    <img
+      class="{{ animationGuessClasses }}"
+      src="assets/images/cards/{{ cardSrc }}"
+    />
+  </main>
+  <aside id="aside">
+    <app-high-scores [winners]="winners"></app-high-scores>
+  </aside>
+</div>

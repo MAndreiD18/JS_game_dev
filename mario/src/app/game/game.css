@@ -1,0 +1,22 @@
+main {
+    /* background-color: lightblue; */
+    text-align: center;
+}
+
+#board {
+    width: 800px;
+    height: 600px;
+    background-color: yellow;
+    margin: 0 auto;
+    border: 2px solid black;
+    position: relative;
+}
+
+#player {
+    background-image: url("/images/sprites/professor.png");
+    background-position: bottom 0 left 0;
+    width: 64px;
+    height: 64px;
+    border: 1px solid red;
+    position: absolute;
+}
